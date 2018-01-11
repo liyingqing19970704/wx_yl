@@ -1,0 +1,27 @@
+盈领生活--机票订购
+<form class="life_bd" bindsubmit="formSubmit" bindreset="formReset">
+  <view>联系人
+    <input id="name" name="name" type="text" placeholder='请输入乘机人姓名'></input>
+  </view>
+   <view>联系电话
+    <input id="mobile" name="mobile"  type="text"  placeholder='请输入订票人电话'></input>
+  </view>
+
+  <view>选择出发城市
+    <picker mode="selector" bindchange="startChange" value="{{start}}" range="{{array}}">
+      出发城市：
+      <text>{{array[start]}}</text>
+    </picker>
+  </view>
+  <view>选择到达城市
+    <picker mode="selector" bindchange="arriveChange" value="{{arrive}}" range="{{array}}">
+      <view class="picker">
+        到达城市：{{array[arrive]}}
+      </view>
+    </picker>
+  </view>
+   <view class="btn-area">
+    <button bindsubmit='formSubmit' formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view> 
+</form>
