@@ -1,0 +1,49 @@
+<view class="container"> 
+<text>盈领生活--机票订购</text>
+<form class="life_bd" bindsubmit="formSubmit" bindreset="formReset">
+  <view>联系人
+    <input id="name" name="name" type="text" placeholder='请输入乘机人姓名'></input>
+  </view>
+   <view>联系电话
+    <input id="mobile" name="mobile"  type="text"  placeholder='请输入订票人电话'></input>
+  </view>
+
+  
+    <picker id ="s"  mode="selector" bindchange="startChange" value="{{start}}" range="{{array}}">
+      
+      <view class="start">
+        出发城市：{{array[start]}}
+      </view>
+      
+    </picker>
+
+
+    <picker id="a" mode="selector" bindchange="arriveChange" value="{{arrive}}" range="{{array}}">
+      <view class="arrive">
+        到达城市：{{array[arrive]}}
+      </view>
+    </picker>
+  
+
+    <view>出发时间
+    <input id="start_time" name="start_time"  type="text"  placeholder='请选择出发时间'></input>
+  </view>
+    <view>其他备注
+    <input id="arrive_time" name="arrive_time"  type="text"  placeholder='请输入其他订票备注'></input>
+  </view>
+   <view class="btn-area">
+    <button bindsubmit='formSubmit' formType="submit" >提交</button>
+    <button formType="reset">重置</button>
+  </view> 
+</form>
+</view>
+
+<!--pages/competition.wxml-->
+<!--<text>pages/competition.wxml</text>
+<view>计划的页面</view>
+1.index页面：制作一个index页面，里面有订机票，订酒店，
+制作旅游攻略，三个选项，获取用户信息并存取（技术难题）；
+2.分别制作订机票，订酒店，旅游攻略制作的三个表单提交；
+3.配置服务器进行测试
+4.帮助客户选定成功之后，怎么进行交易
+

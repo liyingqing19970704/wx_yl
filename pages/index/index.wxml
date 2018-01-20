@@ -2,13 +2,34 @@
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+
+   <image 
+    style="width: 70px; height: 50px"src="https://avatars3.githubusercontent.com/u/21084862?s=460&v=4" >      
+    </image>
+       <text class="user-motto">{{motto}}</text>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <navigator url="../../pages/airport/airport" hover-class="djp">
+      订机票
+    </navigator>
+    <navigator url="../../pages/hotel/hotel">订酒店</navigator>
+      <navigator url="../../pages/holiday/holiday">旅游攻略</navigator>
+    
   </view>
 </view>
+
+<!--<div id="content">
+			<a href="air.html"><div class="item">
+				<div class="img djp"></div><span>订机票</span>
+			</div></a><hr>
+			<a href="#"><div class="item">
+				<div class="img djd"></div><span>订酒店</span>
+			</div></a><hr>
+			<a href="#"><div class="item">
+				<div class="img lygldz"></div><span>旅游攻略定制</span>
+			</div></a>
+		</div>
+
+
+
 

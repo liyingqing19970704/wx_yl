@@ -1,7 +1,10 @@
 {
-  "pages":[
-    "pages/life/life",
-    "pages/logs/logs"
+  "pages": [
+    "pages/index/index",
+    "pages/airport/airport",
+    "pages/logs/logs",
+    "pages/holiday/holiday",
+    "pages/hotel/hotel"
   ],
   "window": {
     "backgroundTextStyle": "light",

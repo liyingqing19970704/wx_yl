@@ -19,3 +19,12 @@
 .usermotto {
   margin-top: 200px;
 }
+.djp{
+			background-position: 0px;
+}
+.djd{
+			background-position-x: -38px;
+}
+.lygldz{
+			background-position-x: -76px;
+}
